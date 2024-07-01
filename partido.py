@@ -15,19 +15,19 @@ class Partido():
     def __str__(self):
         return f"id: {self.id}"
     
-    def get_partidoencasa(self, equipos: list[Equipo]):
+    def get_home(self, equipos: list[Equipo]):
         for equipo in equipos:
             if equipo.id ==  self.home:
                 return equipo
         return None
     
-    def get_patidoafuera(self, equipos: list[Equipo]):
+    def get_away(self, equipos: list[Equipo]):
         for equipo in equipos:
             if equipo.id ==  self.away:
                 return equipo
         return None
     
-    def get_partidoestadio(self,estadios: list[Estadio]):
+    def get_estadio(self,estadios: list[Estadio]):
         for estadio in estadios:
             if self.stadium_id == estadio.id:
                 return estadio
